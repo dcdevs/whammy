@@ -12,7 +12,8 @@ angular.module('whammy.controllers', [])
   // Form data for the login modal
   $scope.loginData = {};
 
-
+  $scope.appName = 'Whammy';
+  console.log($scope.appName);
 })
 
 .controller('PlaylistsCtrl', function($scope) {

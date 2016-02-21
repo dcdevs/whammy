@@ -3,7 +3,7 @@ angular.module('whammy.auth', [])
 
     $scope.doLogin = function() {
 
-      $state.transitionTo('app.search');
+      $state.transitionTo('app.dashboard');
 
 
       // Simulate a login delay. Remove this and replace with your login

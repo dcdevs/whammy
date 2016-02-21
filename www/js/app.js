@@ -26,55 +26,65 @@ angular.module('whammy', ['ionic', 'whammy.controllers', 'whammy.auth'])
   $stateProvider
 
     .state('access', {
-    url: '/access',
-    templateUrl: 'templates/login.html',
-    controller: 'logInController'
-  })
-
-
-  .state('app', {
-    url: '/app',
-    abstract: true,
-    templateUrl: 'templates/menu.html',
-    controller: 'AppCtrl'
-  })
-
-  .state('app.search', {
-    url: '/search',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/search.html'
-      }
-    }
-  })
-
-  .state('app.browse', {
-      url: '/browse',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/browse.html'
-        }
-      }
+      url: '/access',
+      templateUrl: 'templates/access/login_tpl.html',
+      controller: 'logInController'
     })
-    .state('app.playlists', {
-      url: '/playlists',
+
+    .state('app', {
+      url: '/app',
+      templateUrl: 'templates/main.html',
+      controller: 'AppCtrl'
+    })
+
+    .state('app.dashboard', {
+      url: '/dashboard',
+      templateUrl: 'templates/dashboard/dashboard_tpl.html',
+    //  controller: 'AppCtrl'
+    })
+
+    .state('app.account', {
+      url: '/account',
+      templateUrl: 'templates/account/account_tpl.html',
+      controller: 'AppCtrl'
+    })
+
+    .state('app.balance', {
+      url: '/transfer',
       views: {
         'menuContent': {
-          templateUrl: 'templates/playlists.html',
-          controller: 'PlaylistsCtrl'
+          templateUrl: 'templates/balance/balance_tpl.html'
         }
       }
     })
 
-  .state('app.single', {
-    url: '/playlists/:playlistId',
-    views: {
-      'menuContent': {
-        templateUrl: 'templates/playlist.html',
-        controller: 'PlaylistCtrl'
+    .state('app.transfer', {
+      url: '/transfer',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/transfer/transfer_tpl.html'
+        }
       }
-    }
-  });
+    })
+
+    .state('app.favorites', {
+      url: '/favorites',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/favorites/favorites_tpl.html'
+        }
+      }
+    })
+
+    .state('app.settings', {
+      url: '/settings',
+      views: {
+        'menuContent': {
+          templateUrl: 'templates/settings/settings_tpl.html'
+        }
+      }
+    })
+
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/access');
 });
