@@ -1,37 +1,55 @@
 <ion-side-menus enable-menu-with-back-views="false">
   <!-- Side Menu -->
-  <ion-side-menu side="left" class="side-menu">
-    <ion-content>
-      <ion-list>
-        <ion-item menu-close ui-sref="app.balance">
-          Balance
-        </ion-item>
-        <ion-item menu-close ui-sref="app.favorites">
-          Favoritos
-        </ion-item>
-        <ion-item menu-close ui-sref="app.transfer">
-          Transferencias
-        </ion-item>
-        <ion-item menu-close ui-sref="app.account">
-          Cuenta
-        </ion-item>
-        <ion-item menu-close ui-sref="app.settings">
-          Ajustes
-        </ion-item>
-        <ion-item menu-close ui-sref="access">
-          Cerrar Sesion
-        </ion-item>
-      </ion-list>
+  <ion-side-menu side="left">
+    <ion-content class="sidemenu">
+      <div class="profile">
+        <img src="img/descarga.png" class="avatar center-block">
+        <h2> Nombre de Usuario</h2>
+      </div>
+      <div class="list">
+        <!-- balance -->
+        <a class="item item-icon-left" menu-close ui-sref="app.balance">
+          <i class="icon fa fa-usd "></i> Balance
+        </a>
+        <!-- favorites -->
+        <a class="item item-icon-left" menu-close ui-sref="app.favorites">
+          <i class="icon ion-star"></i> Favoritos
+        </a>
+        <!-- transfers -->
+        <a class="item item-icon-left" menu-close ui-sref="app.transfer">
+          <i class="icon fa fa-university"></i> Transferencias
+        </a>
+        <!-- account -->
+        <a class="item item-icon-left" menu-close ui-sref="app.account">
+          <i class="icon fa fa-user"></i> Cuenta
+        </a>
+        <!-- settings -->
+        <a class="item item-icon-left" menu-close ui-sref="app.settings">
+          <i class="icon ion-gear-b"></i> Ajustes
+        </a>
+      </div>
     </ion-content>
+    <ion-footer-bar align-title="left" class="bar sidemenu footer">
+      <!-- log out -->
+
+          <a href="" class="padding-bottom" menu-close ui-sref="access">
+            <i class="icon fa fa-sign-out"></i> Cerrar Sesion
+          </a>
+
+
+      <!-- <a class="item item-icon-left" menu-close ui-sref="access">
+
+       </a> -->
+    </ion-footer-bar>
   </ion-side-menu>
   <!-- /Side Menu -->
   <!-- View content -->
   <ion-side-menu-content>
-    <ion-nav-bar class="bar-stable">
+    <ion-nav-bar class="whammy-header">
       <ion-nav-back-button>
       </ion-nav-back-button>
       <ion-nav-buttons side="left">
-        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        <button class="button button-icon button-clear ion-navicon text-white" menu-toggle="left">
         </button>
       </ion-nav-buttons>
     </ion-nav-bar>
