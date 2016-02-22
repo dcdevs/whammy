@@ -25,65 +25,69 @@ angular.module('whammy', ['ionic', 'whammy.controllers', 'whammy.auth'])
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
 
-    .state('access', {
-      url: '/access',
-      templateUrl: 'templates/access/login_tpl.html',
-      controller: 'logInController'
-    })
+  .state('access', {
+    url: '/access',
+    templateUrl: 'templates/access/login_tpl.html',
+    controller: 'logInController'
+  })
 
-    .state('app', {
-      url: '/app',
-      templateUrl: 'templates/main.html',
-      controller: 'AppCtrl'
-    })
+  .state('app', {
+    url: '/app',
+    templateUrl: 'templates/main.html',
+    controller: 'AppCtrl'
+  })
 
-    .state('app.dashboard', {
-      url: '/dashboard',
-      templateUrl: 'templates/dashboard/dashboard_tpl.html',
+  .state('app.dashboard', {
+    url: '/dashboard',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/dashboard/dashboard_tpl.html'
+      }
+    }
     //  controller: 'AppCtrl'
-    })
+  })
 
-    .state('app.account', {
-      url: '/account',
-      templateUrl: 'templates/account/account_tpl.html',
-      controller: 'AppCtrl'
-    })
+  .state('app.account', {
+    url: '/account',
+    templateUrl: 'templates/account/account_tpl.html',
+    controller: 'AppCtrl'
+  })
 
-    .state('app.balance', {
-      url: '/transfer',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/balance/balance_tpl.html'
-        }
+  .state('app.balance', {
+    url: '/balance',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/balance/balance_tpl.html'
       }
-    })
+    }
+  })
 
-    .state('app.transfer', {
-      url: '/transfer',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/transfer/transfer_tpl.html'
-        }
+  .state('app.transfer', {
+    url: '/transfer',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/transfer/transfer_tpl.html'
       }
-    })
+    }
+  })
 
-    .state('app.favorites', {
-      url: '/favorites',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/favorites/favorites_tpl.html'
-        }
+  .state('app.favorites', {
+    url: '/favorites',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/favorites/favorites_tpl.html'
       }
-    })
+    }
+  })
 
-    .state('app.settings', {
-      url: '/settings',
-      views: {
-        'menuContent': {
-          templateUrl: 'templates/settings/settings_tpl.html'
-        }
+  .state('app.settings', {
+    url: '/settings',
+    views: {
+      'menuContent': {
+        templateUrl: 'templates/settings/settings_tpl.html'
       }
-    })
+    }
+  })
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/access');
