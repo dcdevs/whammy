@@ -1,0 +1,85 @@
+/* Empty. Add your own CSS if you like */
+
+.access-body {
+  background: #11c1f3;
+}
+
+.whammy-header{
+  background: rgb(32, 124, 229);
+  color: black;
+}
+
+.sidemenu {
+  background: rgb(32, 124, 229);
+  color: #D4D1CF;
+  //position: relative;
+  z-index: 2;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.sidemenu > .bar-footer {
+  background: red !important;
+  border-color: #ddd;
+  background-color: #fff;
+  color: #444;
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin: -1px;
+  padding: 16px;
+  border-width: 1px;
+  border-style: solid;
+  font-size: 16px;
+}
+
+.sidemenu .icon,
+.footer .icon {
+  color: #D4D1CF;
+  font-size: 1.45em;
+  text-decoration: none;
+}
+
+.sidemenu .profile {
+  width: auto;
+  min-height: 80px;
+  padding: 10px;
+}
+
+.sidemenu > .profile > h1,
+h2,
+h3,
+h4,
+h5 {
+  color: #D4D1CF;
+  text-align: center;
+  font-size: 1em;
+  position: relative;
+  top: -15px;
+}
+
+.sidemenu .profile > .avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+}
+
+.sidemenu .item {
+  background-color: transparent;
+  border: none;
+  border-top: 1px solid black;
+}
+
+.sidemenu-items {
+  color: #6C5E57;
+  background: none !important;
+}
+
+.center-block {
+  display: block;
+  margin: 0 auto;
+}
+
+.text-white {
+  color: white !important;
+}
