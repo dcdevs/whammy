@@ -1,4 +1,5 @@
 {
   "name": "whammy",
-  "app_id": "e0d0bf6d"
+  "app_id": "e0d0bf6d",
+  "gulpStartupTasks": ["stylus", "watch"]
 }
