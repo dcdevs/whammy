@@ -2,9 +2,9 @@
   <!-- Side Menu -->
   <ion-side-menu side="left">
     <ion-content class="sidemenu">
-      <div class="profile">
-        <img src="assets/img/descarga.png" class="avatar center-block">
-        <h2> Nombre de Usuario</h2>
+      <div class="profile avatar">
+        <img src="assets/img/descarga.png" >
+        <h2 class=""> Nombre de Usuario</h2>
       </div>
       <div class="list">
         <!-- balance -->
@@ -29,14 +29,13 @@
         </a>
       </div>
     </ion-content>
-    <ion-footer-bar align-title="left" class="bar sidemenu footer">
+    <ion-footer-bar align-title="left" class="bar footer">
+    <div class="list">
+      <a href="" class="padding-bottom" menu-close ui-sref="access">
+        <i class="icon fa fa-sign-out"></i> Cerrar Sesion
+      </a>
+    </div>
       <!-- log out -->
-
-          <a href="" class="padding-bottom" menu-close ui-sref="access">
-            <i class="icon fa fa-sign-out"></i> Cerrar Sesion
-          </a>
-
-
       <!-- <a class="item item-icon-left" menu-close ui-sref="access">
 
        </a> -->
@@ -46,7 +45,6 @@
   <!-- View content -->
   <ion-side-menu-content>
     <ion-nav-bar class="whammy-header">
-      <ion-nav-back-button>
       </ion-nav-back-button>
       <ion-nav-buttons side="left">
         <button class="button button-icon button-clear ion-navicon text-white" menu-toggle="left">
