@@ -1,83 +1,64 @@
-.access-body {
-  background: #11c1f3;
-}
+.whammy-header
+  background whammy-color !important
+  border 0px !important
+  color black !important
 
-.whammy-header{
-  background: rgb(32, 124, 229);
-  color: black;
-}
+.sidemenu
+  background whammy-color
+  z-index 2
+  padding 10px
 
-.sidemenu {
-  background: rgb(32, 124, 229);
-  color: #D4D1CF;
-  //position: relative;
-  z-index: 2;
-  padding: 10px;
-  font-size: 16px;
-}
+  .item
+    background-color transparent !important
+    border none
+    border-top 1px solid black
 
-.sidemenu > .bar-footer {
-  background: red !important;
-  border-color: #ddd;
-  background-color: #fff;
-  color: #444;
-  position: relative;
-  z-index: 2;
-  display: block;
-  margin: -1px;
-  padding: 16px;
-  border-width: 1px;
-  border-style: solid;
-  font-size: 16px;
-}
+  .icon, .footer
+    .icon
+       color #D4D1CF
+       font-size 1.45em
+       text-decoration none
 
-.sidemenu .icon,
-.footer .icon {
-  color: #D4D1CF;
-  font-size: 1.45em;
-  text-decoration: none;
-}
+  .profile
+    display flex
+    align-items center
 
-.sidemenu .profile {
-  width: auto;
-  min-height: 80px;
-  padding: 10px;
-}
+    width auto
+    min-height 80px
+    padding 10px
+    margin-bottom 10px
 
-.sidemenu > .profile > h1,
-h2,
-h3,
-h4,
-h5 {
-  color: #D4D1CF;
-  text-align: center;
-  font-size: 1em;
-  position: relative;
-  top: -15px;
-}
+    h1,h2,h3,h4,h5
+      color center
+      text-align center
+      font-size 1em
+      position relative
+      font-weight 500
+      margin-left 10px
+      margin-right 10px
 
-.sidemenu .profile > .avatar {
-  width: 80px;
-  height: 80px;
-  border-radius: 100%;
-}
 
-.sidemenu .item {
-  background-color: transparent;
-  border: none;
-  border-top: 1px solid black;
-}
 
-.sidemenu-items {
-  color: #6C5E57;
-  background: none !important;
-}
 
-.center-block {
-  display: block;
-  margin: 0 auto;
-}
+.sidemenu-items
+  color #6C5E57
+  background none !important
 
-.text-white {
-  color: white !important;
-}
+
+.bar-footer
+    background-color: whammy-color !important;
+    color: white !important;
+    position: relative;
+    z-index: 2;
+    display: block;
+    margin: -1px;
+    padding: 16px !important;
+    font-size: 16px !important;
+
+    a
+      text-decoration none
+      color black !important
+
+
+
+
